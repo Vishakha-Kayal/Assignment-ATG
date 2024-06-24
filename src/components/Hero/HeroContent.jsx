@@ -64,7 +64,7 @@ const HeroContent = ({ loggedin }) => {
                         <img src={error} alt="" />
                         <p className="text-[#000000] opacity-[50%] text-xs leading-4">Your location will help us serve better and extend a personalised experience.</p>
                     </div>
-                    {!loggedin ? (
+                    {loggedin ? (
                         <>
                             <section className="w-full flex flex-col justify-start">
                             <div className="w-[100%] mt-9 flexprop gap-2 py-2 px-2">
