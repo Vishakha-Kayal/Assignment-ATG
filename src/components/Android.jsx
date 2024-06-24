@@ -12,7 +12,7 @@ import ronal from "../assets/images/ronal.png";
 import joseph from "../assets/images/joseph.png";
 import Arrow from "../assets/images/arrow.png";
 
-const Android = () => {
+const Android = ({loggedin}) => {
   const [showCreateAccount, setShowCreateAccount] = useState(false);
   const handleCreateAccountClick = () => {
     setShowCreateAccount(true);
@@ -33,9 +33,20 @@ const Android = () => {
         <div className="w-full h-full absolute top-0 bg-intro-image z-10"></div>
         <div className="flex justify-between items-center px-4 pt-4">
           <img src={leftIcon} alt="" className="z-50" />
-          <div className="z-50 border-[3px] border-white rounded-lg text-white px-2 py-1 text-[0.95rem] cursor-pointer" onClick={handleCreateAccountClick}>
-            Join Group
+          {
+            !loggedin && (
+              <div className="z-50 border-[3px] border-white rounded-lg text-white px-2 py-1 text-[0.95rem] cursor-pointer" onClick={handleCreateAccountClick}>
+              Join Group
+            </div>
+            )
+          }
+          {loggedin?
+          <>
+            <div className="z-50 border-[3px] border-white rounded-lg text-white px-2 py-1 text-[0.95rem] cursor-pointer" onClick={handleCreateAccountClick}>
+            Leave Group
           </div>
+          </>
+          :null}
         </div>
         <div className="z-30 absolute top-[65%] left-[12.5%] flex flex-col justify-start items-start ">
           <h1 className="text-white z-50 text-[1.3rem] font-semibold">

@@ -1,5 +1,6 @@
 import useWindowWidth from "./hooks/useWindowWidth";
 import Navbar from "./components/Navbar";
+import LoggedIn from "./components/LoggedIn"
 import IntroductionScreen from "./components/IntroductionScreen";
 import Android from "./components/Android";
 import HeroContent from "./components/Hero/HeroContent";
@@ -13,12 +14,12 @@ function App() {
       return (
         <>
           <main className="w-full h-full pt-[0.3rem]">
-            <Navbar />
-            {/* <CreateAccount />             */}
+            <Navbar loggedin={false}/>
             <IntroductionScreen />
             <div className="w-[80%] h-full m-auto pt-6">
-              <HeroContent />
+              <HeroContent loggedIn={false}/>
             </div>
+            {/* <LoggedIn/> */}
           </main>
         </>
       );
@@ -26,7 +27,7 @@ function App() {
       return (
         <>
           <main className="w-full h-screen pt-[0.3rem] relative z-0">
-            <Android />
+            <Android loggedin={false}/>
           </main>
         </>
       );
