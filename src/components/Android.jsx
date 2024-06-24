@@ -42,7 +42,7 @@ const Android = ({loggedin}) => {
           }
           {loggedin?
           <>
-            <div className="z-50 border-[3px] border-white rounded-lg text-white px-2 py-1 text-[0.95rem] cursor-pointer" onClick={handleCreateAccountClick}>
+            <div className="z-50 border-[3px] border-white rounded-lg text-white px-2 py-1 text-[0.95rem] cursor-pointer">
             Leave Group
           </div>
           </>
