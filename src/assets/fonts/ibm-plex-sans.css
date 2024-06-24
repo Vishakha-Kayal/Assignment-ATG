@@ -1,0 +1,19 @@
+/* src/assets/fonts/ibm-plex-sans.css */
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('./IBM-Plex-Sans-Regular.woff2') format('woff2'),
+         url('./IBM-Plex-Sans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('./IBM-Plex-Sans-Bold.woff2') format('woff2'),
+         url('./IBM-Plex-Sans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+  }
+  
+  /* Add additional @font-face rules for other font weights/styles as needed */
+  
