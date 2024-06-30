@@ -10,12 +10,15 @@ const Navbar = ({ loggedin }) => {
     const handleCreateAccountClick = () => {
         setShowCreateAccount(true);
     };
+    const handleCloseBtn =()=>{
+        setShowCreateAccount(false);
+    }
     {
         if (loggedin) {
             return (
                 <>
                     <div className='w-full h-[9.86vh] px-12 flex'>
-                        {showCreateAccount && <CreateAccount />}
+                        {showCreateAccount ? <CreateAccount handleCloseBtn={handleCloseBtn}/>: null}
                         <div className='w-full h-full flex justify-between items-center'>
                             <div className=''>
                                 <img src={AtgLogo} alt="ATG Logo" className='w-[10.156rem]' />
@@ -31,7 +34,7 @@ const Navbar = ({ loggedin }) => {
                                 <h5 className='text-[1rem] whitespace-nowrap leading-[1.3rem] cursor-pointer'>Siddharth Goyal</h5>
                                 <h5><img src={Arrow} alt="" className='w-6 h-6' /></h5>
                             </div>
-                       gap-3 </div>
+                        </div>
                     </div>
                 </>
             );
@@ -39,7 +42,7 @@ const Navbar = ({ loggedin }) => {
             return (
                 <>
                     <div className='w-full h-[9.86vh] px-12 flex'>
-                        {showCreateAccount && <CreateAccount/>}
+                    {showCreateAccount ? <CreateAccount handleCloseBtn={handleCloseBtn}/>: null}
                         <div className='w-full flex justify-between items-center'>
                             <div className=''>
                                 <img src={AtgLogo} alt="ATG Logo" className='w-[10.156rem]' />

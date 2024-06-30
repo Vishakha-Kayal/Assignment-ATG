@@ -3,15 +3,16 @@ import eye from "../assets/images/eyeicon.png"
 import fb from "../assets/images/fb-logo.png"
 import google from "../assets/images/google.png"
 import createacc_img from "../assets/images/createacc_img.png"
+import { ImCross } from "react-icons/im";
 
-const CreateAccount = () => {
+const CreateAccount = ({handleCloseBtn}) => {
     return (
         <>
             <div className="px-[1.25rem] py-9 createAcc w-full h-[79%] lg:w-[48%] lg:h-[75%] lg:left-[26%] lg:top-[10%] bg-white absolute bottom-0 z-[99] rounded-s-xl rounded-e-xl">
                 <section className="w-full h-full flex flex-col">
                     <div className="nav flex justify-between items-center">
                         <h2 className="text-[1.25rem] font-bold">Create Account</h2>
-                        <h5><img src={cross} alt="" className="w-6 h-6 opacity-[80%]" /></h5>
+                        <ImCross onClick={handleCloseBtn}/>
                     </div>
                     <div className="lg:flex lg:w-full lg:h-full h-[40%]">
                         <div className="lg:w-[50%] h-[100%] lg:h-[45%]">
